@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/burger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Logo burger"
+            app:srcCompat="@mipmap/burger_foreground"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="1dp" />
+
+        <TextView
+            android:id="@+id/Titre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/bienvenue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/Nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/Prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15sp"
+            android:text="Prenom"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/Adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adresse"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputAdresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/Telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15sp"
+            android:text="N° Telephone"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textBurger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15sp"
+            android:text="Choix du burger"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerBurger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/heureLivraison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10sp"
+            android:text="Heure de livraison"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/inputLivraison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="none"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/buttonValider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Commander" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
